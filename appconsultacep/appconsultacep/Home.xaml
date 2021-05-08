@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:appconsultacep.Renders"
+             NavigationPage.HasNavigationBar="false"
+             x:Class="appconsultacep.Home">
+
+    <StackLayout  BackgroundColor="#f9d706" Padding="30" Spacing="25" HorizontalOptions="FillAndExpand">
+        <Image Source="rastreio" WidthRequest="80"/>
+        <Label Text="CONSULTAR CEP" TextColor="Black" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+        <ActivityIndicator x:Name="Loading" IsVisible="false" Color="Green"/>
+        <local:EntryRenderer x:Name="entryCep" Visual="Material"  Placeholder="Digite seu cep sem traços"  BackgroundColor="White" Keyboard="Numeric" />
+        <Button x:Name="btnSearch" Visual="Material" HeightRequest="60" BackgroundColor="#00416b" Text="Buscar CEP" TextColor="White" FontAttributes="Bold" Clicked="btnSearch_Clicked"/>
+        <Label Text="Dados da Pesquisa" Visual="Material" TextColor="Black" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+        <Frame Visual="Material" CornerRadius="8" BorderColor="Gray" HasShadow="True" HeightRequest="120" >
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Rua:" FontSize="15" FontAttributes="Bold" TextColor="Black"/>
+                    <Label x:Name="lblresultStreet" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Bairro:" FontSize="15" FontAttributes="Bold" TextColor="Black"/>
+                    <Label x:Name="lblresultDistrict" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Cidade:" FontSize="15" FontAttributes="Bold" TextColor="Black"/>
+                    <Label x:Name="lblresultCity" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Estado:" FontSize="15" FontAttributes="Bold" TextColor="Black"/>
+                    <Label x:Name="lblresultState" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+</ContentPage>
