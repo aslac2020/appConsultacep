@@ -9,5 +9,5 @@
   <!--Pages can be added as references or inline-->
     <tabbedbottm:Home Title="Home" IconImageSource="home"></tabbedbottm:Home>
     <tabbedbottm:TrackPackage Title="Rastrear" IconImageSource="search"></tabbedbottm:TrackPackage>
-    <tabbedbottm:Home></tabbedbottm:Home>
+    <tabbedbottm:ShippingCalculate Title="Frete" IconImageSource="shipping"></tabbedbottm:ShippingCalculate>
 </TabbedPage>

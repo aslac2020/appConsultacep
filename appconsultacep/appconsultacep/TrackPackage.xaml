@@ -10,6 +10,9 @@
             <Label Text="Rastrear Pacote" TextColor="Black" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
             <local:EntryRenderer x:Name="entryCep" Visual="Material"  Placeholder="Digite seu codigo de rastreio"  BackgroundColor="White" Keyboard="Numeric" />
             <Button x:Name="btnSearch" Visual="Material" HeightRequest="60" BackgroundColor="#00416b" Text="Rastrear Encomenda" TextColor="White" FontAttributes="Bold" />
+            <StackLayout>
+                <Frame></Frame>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
