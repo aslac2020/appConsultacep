@@ -13,12 +13,17 @@ namespace appconsultacep
 
         private async void btnSearch_Clicked(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(entryCep.Text))
+            {
+                await DisplayAlert("Ops!", "Preencher o cep sem traços", "Ok");
+                return;
+            }
+
             var cepEntry = entryCep.Text.Trim();
-            Loading.IsRunning = true;
+
             try
             {
-                if (string.IsNullOrEmpty(cepEntry))
-                    await DisplayAlert("Ops!", "Preencher o cep sem traços", "Ok");
 
                 var cepIsvalid = IsValidCep(cepEntry);
 
@@ -29,6 +34,7 @@ namespace appconsultacep
                     lblresultDistrict.Text = result.bairro;
                     lblresultCity.Text = result.localidade;
                     lblresultState.Text = result.uf;
+                    lblresultDate.Text = string.Format(DateTime.Now.ToString("dd/MM/yyyy á H:mm"));
                 }
                 else
                 {
@@ -36,14 +42,12 @@ namespace appconsultacep
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                await DisplayAlert("Falha ao procurar o cep", ex.Message, "Ok");
+                await DisplayAlert("Aviso", "Falha ao procurar o cep :(", "Ok");
             }
-            Loading.IsRunning = false;
 
         }
-
 
         private bool IsValidCep(string cep)
         {

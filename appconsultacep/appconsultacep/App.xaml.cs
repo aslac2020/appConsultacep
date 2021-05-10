@@ -10,7 +10,7 @@ namespace appconsultacep
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Home());
+            MainPage = new NavigationPage(new TabbedPages());
         }
 
         protected override void OnStart()

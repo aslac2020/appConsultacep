@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:appconsultacep.Renders"
+             Title="Rastrear Encomenda"
+             x:Class="appconsultacep.TrackPackage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#f9d706" Padding="25" Spacing="20">
+            <Image Source="caixa" HeightRequest="120"/>
+            <Label Text="Rastrear Pacote" TextColor="Black" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <local:EntryRenderer x:Name="entryCep" Visual="Material"  Placeholder="Digite seu codigo de rastreio"  BackgroundColor="White" Keyboard="Numeric" />
+            <Button x:Name="btnSearch" Visual="Material" HeightRequest="60" BackgroundColor="#00416b" Text="Rastrear Encomenda" TextColor="White" FontAttributes="Bold" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

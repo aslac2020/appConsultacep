@@ -90,18 +90,29 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\appconsultacep\appconsultacep.csproj">
-      <Project>{B019B19B-4FC0-4D73-B20F-EEB9969A4255}</Project>
-      <Name>appconsultacep</Name>
-    </ProjectReference>
+    <AndroidResource Include="Resources\drawable\search.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\correios.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\rastreio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\frete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\caminhao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\appconsultacep\appconsultacep.csproj">
+      <Project>{239cd394-8449-4c78-9996-9046d78a7d89}</Project>
+      <Name>appconsultacep</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

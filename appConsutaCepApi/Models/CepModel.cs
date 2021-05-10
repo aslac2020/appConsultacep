@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace appconsultacep.Models
+namespace appConsutaCepApi.Models
 {
-    public class CepModels
+    public class CepModel
     {
         public string cep { get; set; }
         public string logradouro { get; set; }
@@ -15,6 +16,5 @@ namespace appconsultacep.Models
         public string ibge { get; set; }
         public string gia { get; set; }
         public DateTime hourConsult { get; set; }
-
     }
 }
